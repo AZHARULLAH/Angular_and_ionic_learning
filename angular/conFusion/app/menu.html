@@ -23,14 +23,67 @@
     <![endif]-->
 </head>
 
-<body ng-app="">
+<body ng-app="confusionApp">
 
     <div class="container">
         <div class="row row-content">
 
-            <div class="row row-content"
-                       ng-init="
-                         dishes=[
+            <div class="row row-content" ng-controller = "menuController as menuCtrl">
+
+            <div class="col-xs-12">
+
+            	<ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" ng-class = "{active: menuCtrl.isselected(1)}">
+                    	<a ng-click="menuCtrl.select(1)" aria-controls="all menu" role="tab">The Menu</a>
+                    </li>
+                    <li role="presentation" ng-class = "{active: menuCtrl.isselected(2)}">
+                    	<a ng-click="menuCtrl.select(2)" aria-controls="appetizers" role="tab">Appetizers</a>
+                    </li>
+                    <li role="presentation" ng-class = "{active: menuCtrl.isselected(3)}">
+                    	<a ng-click="menuCtrl.select(3)" aria-controls="mains" role="tab">Mains</a>
+                    </li>
+                    <li role="presentation" ng-class = "{active: menuCtrl.isselected(4)}">
+                    	<a ng-click="menuCtrl.select(4)" aria-controls="desserts" role="tab">Desserts</a>
+                   	</li>
+                </ul>
+
+                <div class="tab-content">
+	               	<ul class="media-list tab-pane fade in active">
+	                	<li class="media" ng-repeat="dish in menuCtrl.dishes | filter:menuCtrl.filtText">
+	                    	<div class="media-left media-middle">
+	                        	<a href="#"> <img class="media-object img-thumbnail" ng-src={{dish.image}} alt="Uthappizza"> </a>
+	                    	</div>
+	                    	<div class="media-body">
+	                        	<h2 class="media-heading">{{dish.name}}
+	                         	<span class="label label-danger">{{dish.label}}</span>
+	                         	<span class="badge">{{dish.price | currency}}</span></h2>
+	                        	<p>{{dish.description}}</p>
+	                    	</div>
+	                	</li>
+	            	</ul>
+	            </div>
+
+            </div>
+
+            <div class="col-xs-12">
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+
+    <script type="text/javascript">
+
+    	var app = angular.module("confusionApp", []);
+
+    	app.controller('menuController', function()
+		{
+
+			this.tab = 1;
+
+			this.filtText = "";
+
+			var dishes = [
                          {
                            name:'Uthapizza',
                            image: 'images/uthapizza.png',
@@ -67,36 +120,40 @@
                            description:'A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms',
                            comment: ''
                         }
-                        ]">
+                        ];
 
-            <div class="col-xs-12">
-               <ul class="media-list">
-                <li class="media" ng-repeat="dish in dishes">
-                    <div class="media-left media-middle">
-                        <a href="#">
-                        <img class="media-object img-thumbnail"
-                         ng-src={{dish.image}} alt="Uthappizza">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <h2 class="media-heading">{{dish.name}}
-                         <span class="label label-danger">{{dish.label}}</span>
-                         <span class="badge">{{dish.price | currency}}</span></h2>
-                        <p>{{dish.description}}</p>
-                        <p>Comment: {{dish.comment}}</p>
-                        <p>Type your comment:
-                         <input type="text" ng-model="dish.comment"></p>
-                    </div>
-                </li>
-            </ul>
-            </div>
+            this.dishes = dishes;
 
-            <div class="col-xs-12">
-            </div>
-        </div>
-    </div>
+            this.select = function(setTab)
+            {
+            	this.tab = setTab;
 
-    <script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+            	if(setTab === 2)
+            	{
+            		this.filtText = "appetizer";
+            	}
+            	else if(setTab === 3)
+            	{
+            		this.filtText = "mains";
+            	}
+            	else if(setTab === 4)
+            	{
+            		this.filtText = "dessert";
+            	}
+            	else
+        		{
+            		this.filtText = "";
+            	}
+            }
+
+            this.isselected = function(checkTab)
+            {
+            	return (this.tab === checkTab);
+            }
+
+		});
+
+    </script>
 
 </body>
 
