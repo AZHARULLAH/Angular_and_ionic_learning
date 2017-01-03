@@ -1,0 +1,12 @@
+Url for exercise: https://www.coursera.org/learn/angular-js/supplement/63KTw/exercise-instructions-web-tools-grunt
+
+Installing grunt: npm install -g grunt-cli
+
+Install grunt locally in the project : npm install grunt --save-dev
+
+For JSHint Task: 	npm install grunt-contrib-jshint --save-dev
+					npm install jshint-stylish --save-dev
+					npm install time-grunt --save-dev
+					npm install jit-grunt --save-dev
+
+After adding .jshintrc (to install requirements in the .jshintrc) : grunt 
