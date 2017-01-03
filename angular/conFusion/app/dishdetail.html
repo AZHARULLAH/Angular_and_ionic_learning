@@ -40,7 +40,7 @@
               </div>
             </div>
             <div class="col-xs-9 col-xs-offset-1">
-                <h4><strong>Customer Comments</strong> Sort by: <input ng-model="sortCriteria"/> </h4>
+                <h4><strong>Customer Comments</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sort by: <input ng-model="sortCriteria"/> </h4>
                 <blockquote ng-repeat="dishComment in ddc.dish.comments | orderBy : sortCriteria ">
                   <p>{{dishComment.rating}} Stars</p>
                   <p>{{dishComment.comment}}</p>
