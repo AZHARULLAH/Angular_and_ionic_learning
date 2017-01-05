@@ -1,3 +1,5 @@
+Angular coursera exercises complete repo: https://github.com/przemkow/coursera-introduction-to-angularjs
+
 Url for exercise: https://www.coursera.org/learn/angular-js/supplement/63KTw/exercise-instructions-web-tools-grunt
 
 Installing grunt: npm install -g grunt-cli

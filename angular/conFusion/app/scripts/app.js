@@ -106,4 +106,4 @@ app.controller('FeedbackController', ['$scope', function($scope)
             console.log($scope.feedback);
         }
     }
-}])
+}]);
