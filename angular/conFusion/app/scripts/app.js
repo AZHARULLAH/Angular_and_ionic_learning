@@ -1,7 +1,7 @@
 
 'use strict';
 angular.module('confusionApp', ['ngRoute'])
-.config(function($routeProvider, $locationProvider) {
+.config(function($routeProvider) {
   $routeProvider
   // route for the contactus page
   .when('/contactus', {
@@ -20,12 +20,4 @@ angular.module('confusionApp', ['ngRoute'])
   })
   .otherwise('/contactus');
 
-  // use the HTML5 History API
-  // $locationProvider.html5Mode(true);
-
 });
-
- $locationProvider.html5Mode({
-      enabled: true,
-      requireBase: false
-    });
