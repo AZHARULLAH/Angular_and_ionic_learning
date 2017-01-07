@@ -10,27 +10,27 @@ angular.module("confusionApp")
 
        $scope.dishes = menuFactory.getDishes();
 
-      $scope.select = function(setTab)
-      {
-      	$scope.tab = setTab;
+        $scope.select = function(setTab)
+        {
+        	$scope.tab = setTab;
 
-      	if(setTab === 2)
-      	{
-      		$scope.filtText = "appetizer";
-      	}
-      	else if(setTab === 3)
-      	{
-      		$scope.filtText = "mains";
-      	}
-      	else if(setTab === 4)
-      	{
-      		$scope.filtText = "dessert";
-      	}
-      	else
-  		{
-      		$scope.filtText = "";
-      	}
-      }
+        	if(setTab === 2)
+        	{
+        		$scope.filtText = "appetizer";
+        	}
+        	else if(setTab === 3)
+        	{
+        		$scope.filtText = "mains";
+        	}
+        	else if(setTab === 4)
+        	{
+        		$scope.filtText = "dessert";
+        	}
+        	else
+    		{
+        		$scope.filtText = "";
+        	}
+        }
 
       $scope.isselected = function(checkTab)
       {
@@ -39,9 +39,9 @@ angular.module("confusionApp")
 
 }])
 
-.controller('dishDetailController', [ '$scope', 'menuFactory', '$routeParams', function($scope, menuFactory, $routeParams) 
+.controller('dishDetailController', [ '$scope', 'menuFactory', '$stateParams', function($scope, menuFactory, $stateParams) 
 {
-        var dish=menuFactory.getDish(parseInt($routeParams.id, 10));
+        var dish=menuFactory.getDish(parseInt($stateParams.id, 10));
         
         $scope.dish = dish;
     
