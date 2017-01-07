@@ -1,0 +1,4 @@
+Angular Course:
+
+1) In module 2, the grunt file created some errors, reason unknown. The whole grunt and gulp part in the module 2 was not hence done.
+2) In module 4, Angular testing and Web tools part wasn't done because I felt it was not required for the coming up Ionic course.
