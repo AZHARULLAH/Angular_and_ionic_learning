@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<form name="myForm">
+	Name: <input type="text" name="name">
+	Password: <input type="password" name="password">
+	<input type="submit" value="Submit" onclick="validateForm()">
+</form>
+
+<script type="text/javascript">
+	
+	function validateForm()
+	{
+		var name = document.getElementsByName("name");
+		var pass = document.getElementsByName("password");
+		alert(name + pass);
+	}
+
+</script>
+
+
+</body>
+</html>

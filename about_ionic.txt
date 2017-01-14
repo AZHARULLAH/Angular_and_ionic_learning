@@ -1,0 +1,26 @@
+Cross-platform app development with Ionic framework
+
+Abstract:
+
+	Ionic is a complete open-source SDK that helps you build native-feeling mobile apps using web technologies like HTML, CSS, and Javascript. Ionic is focused mainly on the look and feel, and UI interaction of your app. Built on top of AngularJS and Apache Cordova, Ionic provides tools and services for developing hybrid mobile apps. Apps can be built with these web technologies and then distributed through native app stores to be installed on devices by leveraging Cordova. 
+
+	Ionic apps work on devices running iOS 8+, Android 4.4+, Windows 10 and Blackberry 10. Ionic is a great solution for creating both mobile web apps and native apps as the apps are built in very clean and modular way, so it's very maintainable and easy to update. It also has one the best developers community with around 5 million developers and 100 meetup groups in 200 countries with around 3.1 million apps already developed.
+
+	This talk/workshop intends to give the audience an introduction to hybrid app development and it's advantages. They would hopefully be able to get hold of the working of the framework and deploy a simple ionic app by the end of the workshop.
+
+Outline:
+
+	1) Native vs Hybrid mobile app development
+	2) What Ionic is and how it works
+	3) Why Ionic over other hybrid app development frameworks
+	4) A brief introduction to Angular JS
+	5) Developing a sample Ionic app and testing it on an Android device
+
+	Links:
+		http://julyrapid.com/hybrid-vs-native-mobile-app-decide-5-minutes/
+		https://www.sitepoint.com/native-vs-hybrid-app-development/
+		https://www.ymedialabs.com/hybrid-vs-native-mobile-apps-the-answer-is-clear/
+		https://en.wikipedia.org/wiki/Ionic_(mobile_app_framework)
+		http://ionicframework.com/docs/guide/preface.html
+		http://www.joshmorony.com/8-reasons-why-im-glad-i-switched-to-the-ionic-framework/
+		https://www.quora.com/Is-it-better-to-use-IONIC-or-another-framework-for-a-general-cross-platform-hybrid-app
